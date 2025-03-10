@@ -302,7 +302,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0.07, z: -1.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -320,7 +320,6 @@ GameObject:
   - component: {fileID: 994766339}
   - component: {fileID: 994766338}
   - component: {fileID: 994766337}
-  - component: {fileID: 994766336}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -328,27 +327,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &994766336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994766335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  receivePort: 7001
-  heartbeatAddress: /heartbeat
-  targetObject: {fileID: 0}
-  minScale: 0.8
-  maxScale: 1.5
-  scaleSpeed: 5
-  minHeartRate: 60
-  maxHeartRate: 120
-  beatAnimationDuration: 0.2
 --- !u!135 &994766337
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -445,6 +423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1674556678}
   - component: {fileID: 1674556677}
+  - component: {fileID: 1674556679}
   m_Layer: 0
   m_Name: OSC Manager
   m_TagString: Untagged
@@ -486,6 +465,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1674556679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674556676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscAddress: /test
+  targetObject: {fileID: 994766340}
+  minScale: 0.8
+  maxScale: 1.5
+  smoothSpeed: 5
+  defaultScale: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

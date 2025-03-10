@@ -1,6 +1,8 @@
 # ESP01S OSC测试工程
 
 这是一个基础的测试工程，用于验证ESP01S模块与Unity之间的OSC通信。
+  
+<img src="UnityScreenRecording.gif" width="100%" alt="Unity运行效果演示">
 
 ## 硬件需求
 
@@ -44,8 +46,8 @@ ESP01S_OSC_Test/
 - ESP01S TX -> Arduino D2
 
 *注意：ESP01S需要稳定的3.3V电源，并且ESP01S的RX引脚需要进行电平转换。*
-
-<img src="ESP01S-Arduino Wiring.png" width="100%" alt="ESP01S与Unity通信示意图">
+  
+<img src="ESP01S-Arduino Wiring.png" width="100%" alt="ESP01S与Arduino接线图">
 
 ## 安装和配置
 

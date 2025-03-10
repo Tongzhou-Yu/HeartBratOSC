@@ -45,7 +45,7 @@ ESP01S_OSC_Test/
 
 *注意：ESP01S需要稳定的3.3V电源，并且ESP01S的RX引脚需要进行电平转换。*
 
-<img src="Unity/HeartBratOSC/ESP01S_Unity_OSC.png" width="100%" alt="ESP01S与Unity通信示意图">
+<img src="ESP01S-Arduino Wiring.png" width="100%" alt="ESP01S与Unity通信示意图">
 
 ## 安装和配置
 

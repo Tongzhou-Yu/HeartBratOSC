@@ -15,7 +15,7 @@
 
 - Arduino IDE
 - Unity 2020.3或更高版本
-- [extOSC](https://github.com/Iam1337/extOSC) Unity插件（或使用项目中提供的SimpleOSCReceiver脚本）
+- [extOSC](https://github.com/Iam1337/extOSC) Unity插件（项目中提供的SimpleOSCReceiver脚本为它开发）
 
 ## 项目结构
 
@@ -45,6 +45,8 @@ ESP01S_OSC_Test/
 
 *注意：ESP01S需要稳定的3.3V电源，并且ESP01S的RX引脚需要进行电平转换。*
 
+<img src="Unity/HeartBratOSC/ESP01S_Unity_OSC.png" width="100%" alt="ESP01S与Unity通信示意图">
+
 ## 安装和配置
 
 ### Arduino部分
@@ -65,9 +67,9 @@ ESP01S_OSC_Test/
 ### Unity部分
 
 1. 打开Unity项目
-2. 从Asset Store或GitHub下载并导入extOSC插件，或使用提供的SimpleOSCReceiver.cs脚本
+2. 从Asset Store或GitHub下载并导入extOSC插件，使用提供的SimpleOSCReceiver.cs脚本
 3. 打开SampleScene场景
-4. 创建一个空游戏对象，命名为"OSCReceiver"
+4. 创建一个空游戏对象，命名为"OSCReceiver"，并添加OSCReceiver组件
 5. 将SimpleOSCReceiver脚本添加到该对象
 6. 设置接收端口为7001（与Arduino代码中一致）
 7. 选择要控制的目标游戏对象
@@ -81,8 +83,7 @@ ESP01S_OSC_Test/
 5. 运行Unity项目，观察OSC消息的接收情况
 
 ### 获取电脑IP地址
-- Windows: 打开命令提示符，输入`ipconfig`
-- macOS/Linux: 打开终端，输入`ifconfig`
+- OSCReceiver组件上会显示当前电脑的IP地址
 - 确保使用的是局域网IP地址（通常以192.168.或10.0.开头）
 
 ## 故障排除

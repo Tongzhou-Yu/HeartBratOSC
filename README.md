@@ -51,8 +51,16 @@ ESP01S_OSC_Test/
 
 1. 下载并安装Arduino IDE
 2. 按照接线图连接ESP01S
-3. 配置并上传`Arduino_Code/ESP01S_Test/ESP01S_Test.ino`
-4. 在串口监视器中测试ESP01S的响应
+3. 打开`Arduino_Code/ESP01S_Test/ESP01S_Test.ino`
+4. 配置网络设置：
+   ```cpp
+   const char* ssid = "YOUR_WIFI_NAME";      // 修改为您的WiFi名称
+   const char* password = "YOUR_WIFI_PASS";   // 修改为您的WiFi密码
+   const char* host = "192.168.1.100";       // 修改为接收数据的电脑IP地址
+   const int port = 7001;                    // 修改为Unity中设置的接收端口
+   ```
+5. 上传代码到Arduino
+6. 在串口监视器中测试ESP01S的响应
 
 ### Unity部分
 
@@ -68,12 +76,20 @@ ESP01S_OSC_Test/
 
 1. 确保ESP01S已正确连接并上传代码
 2. 确保Arduino和Unity所在的电脑在同一网络中
-3. 修改Arduino代码中的WiFi名称、密码和电脑IP地址
+3. 修改Arduino代码中的网络设置（WiFi名称、密码和电脑IP地址）
 4. 打开串口监视器观察ESP01S的连接状态
 5. 运行Unity项目，观察OSC消息的接收情况
+
+### 获取电脑IP地址
+- Windows: 打开命令提示符，输入`ipconfig`
+- macOS/Linux: 打开终端，输入`ifconfig`
+- 确保使用的是局域网IP地址（通常以192.168.或10.0.开头）
 
 ## 故障排除
 
 - **ESP01S不响应：** 检查电源和接线，确保CH_PD连接到3.3V
 - **无法连接WiFi：** 检查网络名称和密码是否正确
-- **Unity未收到数据：** 检查IP地址和端口设置，检查防火墙设置 
+- **Unity未收到数据：** 
+  - 检查IP地址是否正确（确保使用电脑的局域网IP）
+  - 确认端口号配置一致（Arduino和Unity都是7001）
+  - 检查防火墙设置，可能需要允许Unity通过 

@@ -7,11 +7,11 @@
 // 创建软串口对象
 SoftwareSerial espSerial(ESP_RX, ESP_TX);
 
-// 网络设置
-const char* ssid = "Motion Computation Lab";
-const char* password = "AI010101";
-const char* host = "192.168.31.109";
-const int port = 7003;
+// 网络设置 - 使用前请修改这些值
+const char* ssid = "YOUR_WIFI_NAME";      // TODO: 修改为您的WiFi名称
+const char* password = "YOUR_WIFI_PASS";   // TODO: 修改为您的WiFi密码
+const char* host = "192.168.1.100";       // TODO: 修改为接收数据的电脑IP地址
+const int port = 7001;                    // TODO: 修改为Unity中设置的接收端口
 
 // OSC消息变量
 int counter = 0;
@@ -47,7 +47,7 @@ void setup() {
   cmd += password;
   cmd += "\"";
   
-  sendATCommand(cmd, 10000); // WiFi连接可能需要更长时间
+  sendATCommand(cmd, 10000);
   
   // 查询IP地址
   Serial.println("获取IP地址...");

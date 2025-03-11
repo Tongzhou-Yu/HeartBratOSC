@@ -8,9 +8,9 @@
 SoftwareSerial espSerial(ESP_RX, ESP_TX);
 
 // 网络设置 - 使用前请修改这些值
-const char* ssid = "YOUR_WIFI_NAME";      // TODO: 修改为您的WiFi名称
-const char* password = "YOUR_WIFI_PASS";   // TODO: 修改为您的WiFi密码
-const char* host = "192.168.1.100";       // TODO: 修改为接收数据的电脑IP地址
+const char* ssid = "Wifi名称";      // TODO: 修改为您的WiFi名称
+const char* password = "Wifi密码";   // TODO: 修改为您的WiFi密码
+const char* host = "IP地址";       // TODO: 修改为接收数据的电脑IP地址
 const int port = 7001;                    // TODO: 修改为Unity中设置的接收端口
 
 // OSC消息变量
